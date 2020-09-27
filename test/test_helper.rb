@@ -5,6 +5,13 @@ require 'rails/test_help'
 class ActiveSupport::TestCase
   fixtures :all
   include ApplicationHelper
+
+    # Returns true if a test user is logged in.
+    def is_logged_in?
+      !session[:user_id].nil?
+    end
+
+
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
 
