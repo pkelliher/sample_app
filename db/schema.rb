@@ -27,5 +27,4 @@ ActiveRecord::Schema.define(version: 2020_11_10_231836) do
     t.datetime "activated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
-
 end
